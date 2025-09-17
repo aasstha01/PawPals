@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals - Love is just a paw away</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🐾 PawPals</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn btn--outline nav-btn" id="signInBtn">Sign In</button>
+                <button class="btn btn--primary nav-btn" id="donateBtn">Donate</button>
+                <button class="btn btn--secondary nav-btn" id="listPetBtn">List Pet</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="home-section active-section">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1>Love is just a paw away</h1>
+                            <p>Find your perfect companion and give a loving home to pets in need. Connect with trusted shelters and organizations.</p>
+                            
+                            <!-- Search Bar -->
+                            <div class="search-container">
+                                <div class="search-input-group">
+                                    <input type="text" placeholder="Search for pets..." class="search-input" id="searchInput">
+                                    <select class="location-select" id="locationSelect">
+                                        <option value="">All Locations</option>
+                                    </select>
+                                    <button class="btn btn--primary search-btn" id="searchBtn">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="pet-illustration">
+                                <div class="pet-circle">🐕🐱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <div class="container">
+                    <h2>Find Your Perfect Companion</h2>
+                    <div class="categories-grid" id="categoriesGrid">
+                        <!-- Categories will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Pets Section -->
+            <div class="featured-section">
+                <div class="container">
+                    <h2>Featured Pets</h2>
+                    <div class="pets-grid" id="featuredPetsGrid">
+                        <!-- Featured pets will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Listings Section -->
+        <section id="listings" class="listings-section">
+            <div class="container">
+                <div class="listings-header">
+                    <h1>Available Pets</h1>
+                    <div class="filters-container">
+                        <select class="form-control" id="typeFilter">
+                            <option value="">All Types</option>
+                            <option value="dog">Dogs</option>
+                            <option value="cat">Cats</option>
+                            <option value="rabbit">Rabbits</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select class="form-control" id="locationFilter">
+                            <option value="">All Locations</option>
+                        </select>
+                        <select class="form-control" id="ageFilter">
+                            <option value="">All Ages</option>
+                            <option value="young">Under 1 year</option>
+                            <option value="adult">1-5 years</option>
+                            <option value="senior">Over 5 years</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pets-grid" id="allPetsGrid">
+                    <!-- All pets will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Details Section -->
+        <section id="petDetails" class="pet-details-section">
+            <div class="container">
+                <button class="btn btn--outline back-btn" id="backBtn">← Back to Listings</button>
+                <div class="pet-details-content" id="petDetailsContent">
+                    <!-- Pet details will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-header">
+                    <h1>About PawPals</h1>
+                    <p class="about-subtitle">Connecting loving families with pets in need since 2020</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="mission-section">
+                        <h2>Our Mission</h2>
+                        <p>PawPals connects loving families with pets in need of homes. We work with verified shelters and organizations to ensure every adoption creates a perfect match. Our platform makes it easy to find, connect with, and adopt pets while supporting local animal welfare organizations.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">2,500+</div>
+                            <div class="stat-label">Successful Adoptions</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Partner Shelters</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Cities Covered</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Years of Service</div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-stories">
+                        <h2>Success Stories</h2>
+                        <div class="stories-grid">
+                            <div class="story-card">
+                                <div class="story-image">🐕</div>
+                                <h3>Buddy Found His Forever Home</h3>
+                                <p>"Thanks to PawPals, I found my best friend Buddy. The process was smooth and the shelter was amazing. Buddy has brought so much joy to our family!"</p>
+                                <div class="story-author">- Sarah J., Mumbai</div>
+                            </div>
+                            <div class="story-card">
+                                <div class="story-image">🐱</div>
+                                <h3>Luna's New Beginning</h3>
+                                <p>"Luna was rescued and needed a special home. PawPals helped us connect with the perfect family who understood her needs. She's thriving now!"</p>
+                                <div class="story-author">- Happy Paws Shelter</div>
+                            </div>
+                            <div class="story-card">
+                                <div class="story-image">🐰</div>
+                                <h3>Bunny Brings Joy</h3>
+                                <p>"Our daughter always wanted a pet rabbit. PawPals made it easy to find Bunny, and now she's part of our family. The kids love her!"</p>
+                                <div class="story-author">- The Sharma Family</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-header">
+                    <h1>Contact Us</h1>
+                    <p class="contact-subtitle">Get in touch with our team</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>hello@pawpals.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 98765 00000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <p>123 Pet Street, Animal Colony<br>Mumbai 400001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h3>Hours</h3>
+                                <p>Mon-Sat: 9AM-6PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select class="form-control" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="adoption">Adoption Inquiry</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>My Dashboard</h1>
+                    <div class="user-info" id="userInfo">
+                        <!-- User info will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="dashboard-tabs">
+                    <button class="tab-btn active" data-tab="favorites">My Favorites</button>
+                    <button class="tab-btn" data-tab="requests">Adoption Requests</button>
+                    <button class="tab-btn" data-tab="listings">My Listings</button>
+                </div>
+                <div class="dashboard-content">
+                    <div class="tab-content active" id="favoritesTab">
+                        <div class="pets-grid" id="favoritePetsGrid"></div>
+                    </div>
+                    <div class="tab-content" id="requestsTab">
+                        <div class="requests-list" id="requestsList"></div>
+                    </div>
+                    <div class="tab-content" id="listingsTab">
+                        <div class="pets-grid" id="myListingsGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sign In Modal -->
+    <div class="modal hidden" id="signInModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Welcome to PawPals</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab-btn active" data-tab="login">Log In</button>
+                    <button class="auth-tab-btn" data-tab="signup">Create Account</button>
+                </div>
+                
+                <div class="auth-content">
+                    <div class="auth-form active" id="loginForm">
+                        <form id="loginFormElement">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Log In</button>
+                        </form>
+                    </div>
+                    
+                    <div class="auth-form" id="signupForm">
+                        <form id="signupFormElement">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Account Type</label>
+                                <select class="form-control" name="type" required>
+                                    <option value="">Select account type</option>
+                                    <option value="individual">Individual Adopter</option>
+                                    <option value="organization">Organization/NGO</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Location</label>
+                                <select class="form-control" name="location" id="signupLocation" required>
+                                    <option value="">Select your location</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                
+                <button class="btn btn--outline btn--full-width google-btn">
+                    <span>Continue with Google</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Listing Modal -->
+    <div class="modal hidden" id="listPetModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>List a Pet for Adoption</h3>
+                <button class="modal-close" id="listPetModalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="listPetForm">
+                    <div class="form-group">
+                        <label class="form-label">Pet Name</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Type</label>
+                            <select class="form-control" name="type" required>
+                                <option value="">Select type</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Breed</label>
+                            <input type="text" class="form-control" name="breed" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Age</label>
+                            <input type="text" class="form-control" name="age" placeholder="e.g., 2 years" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Gender</label>
+                            <select class="form-control" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Location</label>
+                        <select class="form-control" name="location" id="petListingLocation" required>
+                            <option value="">Select location</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Upload Photo</label>
+                        <input type="file" class="form-control" name="photo" accept="image/*">
+                        <small style="color: var(--color-text-secondary);">Optional: Upload a photo of your pet</small>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="vaccinated">
+                            <span>Vaccinated</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="neutered">
+                            <span>Neutered/Spayed</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">List Pet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Application Modal -->
+    <div class="modal hidden" id="adoptionModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>Adoption Application</h3>
+                <button class="modal-close" id="adoptionModalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="adoptionForm">
+                    <div class="form-group">
+                        <label class="form-label">Why do you want to adopt this pet?</label>
+                        <textarea class="form-control" name="reason" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Do you have experience with pets?</label>
+                        <select class="form-control" name="experience" required>
+                            <option value="">Please select</option>
+                            <option value="yes">Yes, I have experience</option>
+                            <option value="some">Some experience</option>
+                            <option value="no">No, but willing to learn</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Living Situation</label>
+                        <select class="form-control" name="living" required>
+                            <option value="">Please select</option>
+                            <option value="house">House with yard</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Additional Information</label>
+                        <textarea class="form-control" name="additional" rows="3" placeholder="Any additional information you'd like to share..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
